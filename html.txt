@@ -1,0 +1,105 @@
+   <!-- <li>
+                <div>
+                  <div id="song-name">Song Name</div>
+                  <div id="artist-name">Artist Name</div>
+                </div>
+                <i class="ri-play-line play" id="playKey"></i>
+              </li> -->
+
+
+              
+
+
+   //**********************************************************************************
+   // console.log("Hello");
+
+// let currentSong = new Audio();
+
+// let play = document.querySelector("#play");
+
+// const getSongs = async () => {
+//   try {
+//     let response = await fetch("http://127.0.0.1:5500/songs/");
+//     let data = await response.text();
+//     // console.log(data);
+
+//     let divs = document.createElement("div");
+//     divs.innerHTML = data;
+//     let allDatas = divs.getElementsByTagName("a");
+
+//     let songs = [];
+//     for (let i = 0; i < allDatas.length; i++) {
+//       let element = allDatas[i];
+
+//       if (element.href.endsWith(".mp3")) {
+//         songs.push(element.href.split("/songs/")[1]);
+//         // songs.push(element.href);
+//       }
+//     }
+
+//     // console.log(songs);
+//     return songs;
+//     // console.log(allDatas);
+//   } catch (error) {
+//     console.log("Error in fetch", error);
+//   }
+// };
+
+// const playMusic = (track) => {
+//   // let audio = new Audio("/songs/" + track);
+//   currentSong.src = "/songs/" + track;
+//   currentSong.play();
+//   play.classList.add("ri-play-line");
+// };
+
+// const allSongs = async () => {
+//   let songs = await getSongs();
+
+//   let songUl = document.querySelector(".head-2").getElementsByTagName("ul")[0];
+//   for (const song of songs) {
+//     let decodedSongName = decodeURIComponent(song.replace("%20", " "));
+
+//     songUl.insertAdjacentHTML(
+//       "beforeend",
+//       `<li>
+//         <div>
+//           <div id="song-name">${decodedSongName}</div>
+//           <div id="artist-name">Abhishek Roy</div>
+//         </div>
+//         <i class="ri-play-line play" id="playKey"></i>
+//       </li>`
+//     );
+//   }
+
+//   // Show all the song Attach with all Songs
+//   Array.from(document.querySelector(".head-2").querySelectorAll("li")).forEach(
+//     (e) =>
+//       e.addEventListener("click", (elem) => {
+//         {
+//           console.log(
+//             e.getElementsByTagName("div")[0].querySelector("#song-name")
+//               .innerHTML
+//           );
+//           playMusic(
+//             e.getElementsByTagName("div")[0].querySelector("#song-name")
+//               .innerHTML
+//           );
+//         }
+//       })
+//   );
+
+//   // Attach play, next, previous event listeners for all the songs
+//   play.addEventListener("click", () => {
+//     if (currentSong.paused) {
+//       currentSong.play();
+//       play.classList.remove("ri-play-line");
+//       play.classList.add("ri-pause-line");
+//     } else {
+//       currentSong.pause();
+//       play.classList.remove("ri-pause-line");
+//       play.classList.add("ri-play-line");
+//     }
+//   });
+// };
+
+// allSongs();           
